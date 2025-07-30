@@ -1,0 +1,12 @@
+# Ignore all contents of server directory
+server/*
+
+# But keep these essential files
+!server/server.jar
+!server/start.sh
+
+# Ignore common temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

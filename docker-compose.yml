@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  minecraft:
+    build: .
+    container_name: minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      - MEMORY_MIN=1G
+      - MEMORY_MAX=2G
+      - EULA=true
+    volumes:
+      - ./server:/minecraft
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
